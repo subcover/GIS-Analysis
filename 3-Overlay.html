@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Optimal path</title>
+    <title>Overlay</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,22 +48,25 @@
 
         var shine = L.icon({
             iconUrl: 'https://svgshare.com/i/UPn.svg',
+
             iconSize: [60, 65],
             iconAnchor: [20, 54],
             popupAnchor: [4, -46],
         });
 
-        L.marker([25.145446, 121.738828], { icon: shine }).addTo(map)
+        L.marker([25.1449453, 121.7493046], { icon: shine }).addTo(map)
 
         var pharmacy = L.icon({
             iconUrl: 'https://svgshare.com/i/UQ9.svg',
+
             iconSize: [40, 41],
             iconAnchor: [10, 41],
             popupAnchor: [10, -45],
         });
 
         var you = L.icon({
-            iconUrl: 'C:/Users/使用者/Desktop/2021Azalea/dog.svg',
+            iconUrl: 'https://svgshare.com/i/UQK.svg',
+
             iconSize: [40, 41],
             iconAnchor: [18, 42],
             popupAnchor: [4, -46],
@@ -85,7 +88,7 @@
         L.Routing.control({
             waypoints: [
                 L.latLng(25.142659, 121.742614),
-                L.latLng(25.145446, 121.738828)
+                L.latLng(25.1449453, 121.7493046)
             ],
             show: false,
             Waypoints: false,
@@ -94,6 +97,19 @@
             fitSelectedRoutes: false,
             createMarker: function () { return null; },
         }).addTo(map);
+
+        var polygon = L.polygon([
+            [25.146877, 121.737485],
+            [25.147577, 121.740189],
+            [25.142332, 121.740704],
+            [25.138913, 121.740446],
+            [25.142296, 121.736063]
+        ], {
+            color: '#FFDD55',
+            fillOpacity: 0.5
+        }).addTo(map);
+
+
 
     </script>
 
